@@ -2,10 +2,13 @@
 # Build 
 ###############################################################################
 
-#FROM node:12.13.1 as builder
-FROM node:14 as builder
+FROM debian:bullseye as builder
 
-RUN apt-get update -y && apt-get install -y zip
+RUN apt-get update -y && \
+  apt-get install -y zip curl
+  
+RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
 
 RUN mkdir webrcade 
 COPY \
