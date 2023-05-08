@@ -2,7 +2,8 @@
 # Build 
 ###############################################################################
 
-FROM node:12.13.1 as builder
+#FROM node:12.13.1 as builder
+FROM node:14 as builder
 
 RUN apt-get update -y && apt-get install -y zip
 
