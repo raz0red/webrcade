@@ -4,7 +4,7 @@
 
 FROM ubuntu:20.04 as builder
 
-RUN apt-get update -y && apt-get install -y zip curl git  
+RUN apt-get update -y && apt-get install -y zip curl git wget
 RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash - && apt-get install -y nodejs
 
 RUN mkdir webrcade 
