@@ -4,11 +4,8 @@
 
 FROM debian:bullseye as builder
 
-RUN apt-get update -y && \
-  apt-get install -y zip curl
-  
-RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y nodejs
+RUN apt-get update -y && \ apt-get install -y zip curl git  
+RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash - &&  apt-get install -y nodejs
 
 RUN mkdir webrcade 
 COPY \
