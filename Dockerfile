@@ -2,7 +2,7 @@
 # Build 
 ###############################################################################
 
-FROM debian:bullseye as builder
+FROM debian as builder
 
 RUN apt-get update -y && \ apt-get install -y zip curl git  
 RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash - &&  apt-get install -y nodejs
